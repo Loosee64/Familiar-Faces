@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: EmptyMask
   m_EditorClassIdentifier: Assembly-CSharp::MaskType
   type: Empty
+  damageMult: 1
+  costMult: 0

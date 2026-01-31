@@ -2187,7 +2187,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 08ce85e34f20cbf43adc62117900b314, type: 2}
   - {fileID: 11400000, guid: f467940c8202bcd418f482dff4f98621, type: 2}
   m_masks:
-  - {fileID: 11400000, guid: 6337412f1ed0225469fb8278fd004576, type: 2}
+  - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
   - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
   - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
 --- !u!114 &687474218

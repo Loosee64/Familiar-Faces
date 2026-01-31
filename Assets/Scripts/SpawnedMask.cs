@@ -35,7 +35,7 @@ public class SpawnedMask : MonoBehaviour
     {
         maskType = type;
         spawned = true;
-        panelRef.gameObject.SetActive(true);
+        //panelRef.gameObject.SetActive(true);
     }
 
     public void SelectMask()

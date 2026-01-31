@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Diego
   m_EditorClassIdentifier: Assembly-CSharp::CharacterType
   title: Diego
-  maxHealth: 10
+  maxHealth: 2
   xp: 10
   mask: {fileID: 11400000, guid: 6337412f1ed0225469fb8278fd004576, type: 2}
