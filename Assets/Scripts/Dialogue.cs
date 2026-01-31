@@ -22,9 +22,9 @@ public class Dialogue : MonoBehaviour
         
     }
 
-    public void DisplayDamage(int t_amount, string t_title, string t_target)
+    public void DisplayDamage(float t_amount, string t_title, string t_target)
     {
-        m_text.text = t_title + " dealt " + t_amount.ToString() + " damage to " + t_target + "!";
+        m_text.text = t_title + " dealt " + Mathf.RoundToInt(t_amount).ToString() + " damage to " + t_target + "!";
     }
 
     public void DisplayDeath(string t_title)

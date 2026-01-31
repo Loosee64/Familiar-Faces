@@ -30,11 +30,11 @@ public class Health : MonoBehaviour
         m_text.text = m_health.ToString() + "/" + m_maxHealth.ToString();
     }
 
-    public void Damage(int t_damage)
+    public void Damage(float t_damage)
     {
         if (m_health > 0)
         {
-            m_health -= t_damage;
+            m_health -= Mathf.RoundToInt(t_damage);
             m_healthBarUI.setHealth(m_health);
             m_text.text = m_health.ToString() + "/" + m_maxHealth.ToString();
             Debug.Log("damage");

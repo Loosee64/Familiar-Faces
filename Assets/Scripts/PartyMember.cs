@@ -20,6 +20,7 @@ public class PartyMember : MonoBehaviour
     float m_xp;
     int m_level;
     int m_sp;
+    float m_damage;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -63,7 +64,9 @@ public class PartyMember : MonoBehaviour
     {
         if (m_turn.TurnCheck())
         {
-            m_action.Execute(State.ENEMY1, m_actions[t_type]);
+            m_equippedMask = m_masks[0];
+            m_damage = m_actions[t_type].m_damage * m_equippedMask.damageMult;
+            m_action.Execute(State.ENEMY1, m_damage, m_actions[t_type].m_cost);
         }
     }
 
