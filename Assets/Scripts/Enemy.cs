@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour
 
         m_deadEvent.AddListener(() => GameObject.FindGameObjectWithTag("Dialogue").GetComponent<Dialogue>().DisplayDeath(m_character.GetTitle()));
         m_deadEvent.AddListener(() => GameObject.FindGameObjectWithTag("Player").GetComponent<PartyMember>().AddXP(m_character.GetXP()));
+        m_deadEvent.AddListener(() => GameObject.FindGameObjectWithTag("SpawnedMask").GetComponent<SpawnedMask>().SetType(m_character.GetMask()));
     }
 
     // Update is called once per frame
