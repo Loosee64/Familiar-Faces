@@ -10,12 +10,14 @@ public class CharacterData : MonoBehaviour
     int maxHealth;
     int xp;
     string title;
+    MaskType mask;
 
     private void Awake()
     {
         maxHealth = m_character.maxHealth;
         title = m_character.title;
         xp = m_character.xp;
+        mask = m_character.mask;
     }
 
     public void IncreaseMax(int t_level)
@@ -37,5 +39,5 @@ public class CharacterData : MonoBehaviour
     public int GetMax() { return maxHealth; }
     public string GetTitle() { return title; }
     public int GetXP() { return xp; }
-
+    public MaskType GetMask() { return mask; }
 }
