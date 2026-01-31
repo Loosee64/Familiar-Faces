@@ -1,17 +1,19 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField]
-    private ActionType m_type;
+
+    [SerializeField]  private ActionType m_type;
+    [SerializeField] TextMeshProUGUI m_nameText;
 
     Action m_action;
     TurnSystem m_turn;
     Health m_health;
     CharacterData m_character;
-
+    
     public UnityEvent m_deadEvent;
     bool m_respawned = false;
 
@@ -23,7 +25,16 @@ public class Enemy : MonoBehaviour
         m_health = GetComponent<Health>();
         m_character = GetComponent<CharacterData>();
 
+        if (GameData.Instance != null )
+        {
+            Debug.Log(GameData.Instance.GetCurrentEnemyCharacterName());
+
+            m_character.loadCharaacter( GameData.Instance.GetCurrentEnemyCharacterName() ); 
+        }
+        m_nameText.text = m_character.GetTitle();
         m_health.setMax(m_character.GetMax());
+
+
 
         m_deadEvent.AddListener(() => GameObject.FindGameObjectWithTag("Dialogue").GetComponent<Dialogue>().DisplayDeath(m_character.GetTitle()));
         m_deadEvent.AddListener(() => GameObject.FindGameObjectWithTag("Player").GetComponent<PartyMember>().AddXP(m_character.GetXP()));
@@ -52,7 +63,8 @@ public class Enemy : MonoBehaviour
 
     public void NewEnemy()
     {
-        m_character.NewRandom();
+        // m_character.NewRandom();
+        m_nameText.text = m_character.GetTitle();
         m_health.setMax(m_character.GetMax());
         m_health.FullHeal();
     }

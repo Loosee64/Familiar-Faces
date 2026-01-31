@@ -44,7 +44,15 @@ public class CharacterData : MonoBehaviour
         title = m_character.title;
     }
 
-    
+    public void loadCharaacter(string t_name)
+    {
+        CharacterType tempChar = Resources.Load<CharacterType>("ScriptableObjects/Characters/Enemy/" + t_name);
+
+        maxHealth = tempChar.maxHealth;
+        title = tempChar.title;
+        xp = tempChar.xp;
+        mask = tempChar.mask;
+    }
 
     public int GetMax() { return maxHealth; }
     public string GetTitle() { return title; }
