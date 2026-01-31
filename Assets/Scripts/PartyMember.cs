@@ -64,7 +64,6 @@ public class PartyMember : MonoBehaviour
     {
         if (m_turn.TurnCheck())
         {
-            m_equippedMask = m_masks[0];
             m_damage = m_actions[t_type].m_damage * m_equippedMask.damageMult;
             m_action.Execute(State.ENEMY1, m_damage, m_actions[t_type].m_cost);
         }
@@ -78,7 +77,7 @@ public class PartyMember : MonoBehaviour
         }
     }
 
-    public void ChangeMask(int index, MaskType type)
+    public void ChangeMask(int index)
     {
         m_equippedMask = m_masks[index];
     }

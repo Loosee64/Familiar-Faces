@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Dialogue
+  - SpawnedMask
   layers:
   - Default
   - TransparentFX
