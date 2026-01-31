@@ -1,3 +1,4 @@
+using System.Xml.Linq;
 using UnityEngine;
 
 public class CharacterData : MonoBehaviour
@@ -12,7 +13,7 @@ public class CharacterData : MonoBehaviour
     string title;
     int defense;
     int attack;
-    int agility;
+    float agility;
     int abilityPoints;
     int maxAbilityPoints;
     MaskType mask;
@@ -40,6 +41,23 @@ public class CharacterData : MonoBehaviour
  
     }
 
+    public void LoadPlayer()
+    {
+        CharacterType tempChar = Resources.Load<CharacterType>("ScriptableObjects/Characters/Player");
+
+        maxHealth = tempChar.maxHealth;
+        title = tempChar.title;
+        xp = tempChar.xp;
+        mask = tempChar.mask;
+        xp = tempChar.xp;
+        mask = tempChar.mask;
+        defense = tempChar.defense;
+        attack = tempChar.attack;
+        agility = tempChar.agility;
+        abilityPoints = tempChar.abilityPoints;
+        maxAbilityPoints = tempChar.maxAbilityPoints;
+    }
+
     public void loadCharaacter(string t_name)
     {
         CharacterType tempChar = Resources.Load<CharacterType>("ScriptableObjects/Characters/Enemy/" + t_name);
@@ -63,7 +81,7 @@ public class CharacterData : MonoBehaviour
     public MaskType GetMask() { return mask; }
     public int GetDefense() { return defense; }
     public int GetAttack() { return attack; }
-    public int GetAgility() { return agility; }
+    public float GetAgility() { return agility; }
     public int GetAbilityPoints() { return abilityPoints; }
     public int GetMaxAbilityPoints() { return maxAbilityPoints; }
 }
