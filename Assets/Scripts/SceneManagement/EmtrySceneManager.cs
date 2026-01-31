@@ -12,9 +12,13 @@ public class EmtrySceneManager : MonoBehaviour
 
         if (GameData.Instance != null)
         {
-            CharacterData m_currentEnemy = GameData.Instance.GetCurrentEnemyCharacter();
-            m_currentEnemy.GetComponent<CharacterData>().NewRandom();
-            Debug.Log(m_currentEnemy.GetTitle());
+
+            GameObject go = new GameObject("character");
+            CharacterData character = go.AddComponent<CharacterData>();
+            character.NewRandom();
+
+            GameData.Instance.setCurrentEnemyCharacterName(character.GetTitle());
+         
         }
         else
         {
@@ -25,10 +29,12 @@ public class EmtrySceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CharacterData m_currentEnemy = GameData.Instance.GetCurrentEnemyCharacter();
-        GameData.Instance.GetCurrentEnemyCharacter();
-
-        m_entryText.text = "You will be fighting " + m_currentEnemy.GetTitle() + ", Good luck!!!";
+     
+      if(GameData.Instance != null)
+      {
+         m_entryText.text = "You will be fighting " + GameData.Instance.GetCurrentEnemyCharacterName() + ", Good luck!!!";
+      }
+        
       
     }
 

@@ -6,7 +6,7 @@ public class GameData : MonoBehaviour
     public static GameData Instance { get; private set; }
 
     private List<ScriptableObject> m_playerMasks;
-    private GameObject m_currentEnemy;
+    private string m_currentEnemy;
 
     private void Awake()
     {
@@ -25,13 +25,13 @@ public class GameData : MonoBehaviour
         return m_playerMasks;
     }
 
-    public CharacterData GetCurrentEnemyCharacter()
+    public void setCurrentEnemyCharacterName(string t_name)
     {
-        if( m_currentEnemy == null)
-        {
-            m_currentEnemy = new GameObject( "Enemy");
-            m_currentEnemy.AddComponent<CharacterData>();
-        }
-        return m_currentEnemy.GetComponent<CharacterData>();
+        m_currentEnemy = t_name; 
+    }
+    public string GetCurrentEnemyCharacterName()
+    {
+
+        return m_currentEnemy;
     }
 }
