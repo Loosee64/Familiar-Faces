@@ -16,6 +16,4 @@ public class MaskType : ScriptableObject
     public float defenseMultiplier = 1.0f;
     public float attackMultiplier = 1.0f;
     public float agilityMultiplier = 1.0f;
-
-
 }
