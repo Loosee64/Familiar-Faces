@@ -4,9 +4,10 @@ using UnityEngine.Events;
 
 public class SpawnedMask : MonoBehaviour
 {
+    [SerializeField]
     MaskType maskType;
     bool spawned;
-    UnityEvent selected;
+    public UnityEvent selected;
     int indexSelected;
 
     [SerializeField]
@@ -21,7 +22,7 @@ public class SpawnedMask : MonoBehaviour
     {
         if (spawned)
         {
-            panelRef.gameObject.SetActive(true);
+            
         }
     }
 
@@ -34,6 +35,7 @@ public class SpawnedMask : MonoBehaviour
     {
         maskType = type;
         spawned = true;
+        panelRef.gameObject.SetActive(true);
     }
 
     public void SelectMask()

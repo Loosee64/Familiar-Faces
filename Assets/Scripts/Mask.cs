@@ -13,6 +13,6 @@ public class Mask : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(m_mask.type);
+     //   Debug.Log(m_mask.type);
     }
 }
