@@ -1,3 +1,4 @@
+using System.Xml.Linq;
 using UnityEngine;
 
 public class CharacterData : MonoBehaviour
@@ -12,22 +13,16 @@ public class CharacterData : MonoBehaviour
     string title;
     int defense;
     int attack;
-    int agility;
+    float agility;
     int abilityPoints;
     int maxAbilityPoints;
     MaskType mask;
 
     private void Awake()
     {
-        maxHealth = m_character.maxHealth;
-        title = m_character.title;
-        xp = m_character.xp;
-        mask = m_character.mask;
-        defense = m_character.defense;
-        attack = m_character.attack;
-        agility = m_character.agility;
-        abilityPoints = m_character.abilityPoints;
-        maxAbilityPoints = m_character.maxAbilityPoints;
+        
+        
+       
     }
 
     public void IncreaseMax(int t_level)
@@ -42,6 +37,25 @@ public class CharacterData : MonoBehaviour
 
         maxHealth = m_character.maxHealth;
         title = m_character.title;
+
+ 
+    }
+
+    public void LoadPlayer()
+    {
+        CharacterType tempChar = Resources.Load<CharacterType>("ScriptableObjects/Characters/Player");
+
+        maxHealth = tempChar.maxHealth;
+        title = tempChar.title;
+        xp = tempChar.xp;
+        mask = tempChar.mask;
+        xp = tempChar.xp;
+        mask = tempChar.mask;
+        defense = tempChar.defense;
+        attack = tempChar.attack;
+        agility = tempChar.agility;
+        abilityPoints = tempChar.abilityPoints;
+        maxAbilityPoints = tempChar.maxAbilityPoints;
     }
 
     public void loadCharaacter(string t_name)
@@ -52,6 +66,13 @@ public class CharacterData : MonoBehaviour
         title = tempChar.title;
         xp = tempChar.xp;
         mask = tempChar.mask;
+        xp = tempChar.xp;
+        mask = tempChar.mask;
+        defense = tempChar.defense;
+        attack = tempChar.attack;
+        agility = tempChar.agility;
+        abilityPoints = tempChar.abilityPoints;
+        maxAbilityPoints = tempChar.maxAbilityPoints;
     }
 
     public int GetMax() { return maxHealth; }
@@ -60,7 +81,7 @@ public class CharacterData : MonoBehaviour
     public MaskType GetMask() { return mask; }
     public int GetDefense() { return defense; }
     public int GetAttack() { return attack; }
-    public int GetAgility() { return agility; }
+    public float GetAgility() { return agility; }
     public int GetAbilityPoints() { return abilityPoints; }
     public int GetMaxAbilityPoints() { return maxAbilityPoints; }
 }

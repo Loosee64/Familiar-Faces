@@ -10,19 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e910042725eaed40a9528cd2cb16e36, type: 3}
-  m_Name: Diego
+  m_Name: Player
   m_EditorClassIdentifier: Assembly-CSharp::CharacterType
-  title: Squirrel
+  title: Johnny
   maxHealth: 10
-  xp: 10
-  defense: 1
-  attack: 1
-  agility: 3
-  abilityPoints: 10
-  maxAbilityPoints: 10
-  lightMultiplier: 1
-  heavyMultiplier: 2
-  defenseMultiplier: 2
-  attackMultiplier: 1
-  agilityMultiplier: 1
-  mask: {fileID: 11400000, guid: 6337412f1ed0225469fb8278fd004576, type: 2}

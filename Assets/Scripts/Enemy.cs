@@ -34,8 +34,6 @@ public class Enemy : MonoBehaviour
         m_nameText.text = m_character.GetTitle();
         m_health.setMax(m_character.GetMax());
 
-
-
         m_deadEvent.AddListener(() => GameObject.FindGameObjectWithTag("Dialogue").GetComponent<Dialogue>().DisplayDeath(m_character.GetTitle()));
         m_deadEvent.AddListener(() => GameObject.FindGameObjectWithTag("Player").GetComponent<PartyMember>().AddXP(m_character.GetXP()));
         m_deadEvent.AddListener(() => GameObject.FindGameObjectWithTag("SpawnedMask").GetComponent<SpawnedMask>().SetType(m_character.GetMask()));

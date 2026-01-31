@@ -10,7 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e910042725eaed40a9528cd2cb16e36, type: 3}
-  m_Name: Johnny
+  m_Name: Crow
   m_EditorClassIdentifier: Assembly-CSharp::CharacterType
-  title: Johnny
-  maxHealth: 10
+  title: Crow
+  maxHealth: 12
+  xp: 20
+  defense: 1
+  attack: 1
+  agility: 3
+  abilityPoints: 10
+  maxAbilityPoints: 10
+  mask: {fileID: 11400000, guid: 39697f7735649a144a72e80306da7ac5, type: 2}
