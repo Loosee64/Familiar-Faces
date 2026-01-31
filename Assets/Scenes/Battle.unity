@@ -1362,7 +1362,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.3
+  m_fontSize: 21.6
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2239,6 +2239,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
   - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
   - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
+  m_maskText:
+  - {fileID: 608226104}
+  - {fileID: 1526604258}
+  - {fileID: 1945681881}
 --- !u!114 &687474218
 MonoBehaviour:
   m_ObjectHideFlags: 0

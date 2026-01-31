@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346f4666506d8ff4f98211632740c7eb, type: 3}
   m_Name: SquirrelMask
   m_EditorClassIdentifier: Assembly-CSharp::MaskType
-  type: 
+  type: Squirrel
   defense: 1
   attack: 1
   agility: 3
+  abilityPoints: 10
   lightMultiplier: 1
   heavyMultiplier: 2
   defenseMultiplier: 2

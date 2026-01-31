@@ -52,27 +52,6 @@ public class Enemy : MonoBehaviour
         {
             m_deadEvent.Invoke();
             m_respawned = true;
-            StartCoroutine(SpawnEnemy());
         }
-    }
-
-    public string Name()
-    {
-        return m_character.GetTitle();
-    }
-
-    public void NewEnemy()
-    {
-        // m_character.NewRandom();
-        m_nameText.text = m_character.GetTitle();
-        m_health.setMax(m_character.GetMax());
-        m_health.FullHeal();
-    }
-
-    IEnumerator SpawnEnemy()
-    {
-        yield return new WaitForSeconds(1.0f);
-        NewEnemy();
-        m_respawned = false;
     }
 }
