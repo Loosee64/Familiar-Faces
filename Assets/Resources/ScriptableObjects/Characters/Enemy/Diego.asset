@@ -13,6 +13,15 @@ MonoBehaviour:
   m_Name: Diego
   m_EditorClassIdentifier: Assembly-CSharp::CharacterType
   title: Diego
-  maxHealth: 2
+  maxHealth: 10
   xp: 10
+  defense: 1
+  attack: 1
+  agility: 3
+  abilityPoints: 10
+  lightMultiplier: 1
+  heavyMultiplier: 2
+  defenseMultiplier: 1
+  attackMultiplier: 1
+  agilityMultiplier: 1
   mask: {fileID: 11400000, guid: 6337412f1ed0225469fb8278fd004576, type: 2}

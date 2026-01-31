@@ -2236,9 +2236,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 08ce85e34f20cbf43adc62117900b314, type: 2}
   - {fileID: 11400000, guid: f467940c8202bcd418f482dff4f98621, type: 2}
   m_masks:
-  - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
-  - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
-  - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
+  - {fileID: 11400000, guid: e9152f571b6a8d042861bf3c6a5f53d8, type: 2}
+  - {fileID: 11400000, guid: 943fb44d718fe0e4899066c8ebd1bdca, type: 2}
+  - {fileID: 11400000, guid: 39697f7735649a144a72e80306da7ac5, type: 2}
   m_maskText:
   - {fileID: 608226104}
   - {fileID: 1526604258}
