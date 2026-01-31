@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -50,8 +51,9 @@ public class Enemy : MonoBehaviour
         }
         else if (!m_health.IsAlive() && !m_respawned)
         {
-           // m_deadEvent.Invoke();
+            m_deadEvent.Invoke();
             m_respawned = true;
+            SceneManager.LoadScene("Win");
         }
     }
 }
