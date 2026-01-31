@@ -27,7 +27,7 @@ public class Health : MonoBehaviour
         m_maxHealth = t_amount;
         m_health = m_maxHealth;
         m_healthBarUI.setMax(m_maxHealth);
-        m_text.text = m_health.ToString() + "/" + m_maxHealth.ToString();
+        m_text.text = "HP: " + m_health.ToString() + "/" + m_maxHealth.ToString();
     }
 
     public void Damage(float t_damage)
