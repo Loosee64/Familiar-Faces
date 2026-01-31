@@ -32,6 +32,8 @@ public class PartyMember : MonoBehaviour
         m_character = GetComponent<CharacterData>();
 
         m_health.setMax(m_character.GetMax());
+
+        m_equippedMask = m_masks[0];
     }
 
     // Update is called once per frame

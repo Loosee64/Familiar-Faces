@@ -19,7 +19,9 @@ public class GameState : MonoBehaviour
     private TurnSystem[] m_entities;
 
     [SerializeField]
-    Button m_button;
+    Button m_buttonAttack;
+    [SerializeField]
+    Button m_buttonMask;
 
     public UnityEvent playerTurn;
 
@@ -94,7 +96,8 @@ public class GameState : MonoBehaviour
         if (current < State.ENEMY1)
         {
             playerTurn.Invoke();
-            m_button.gameObject.SetActive(true);
+            m_buttonAttack.gameObject.SetActive(true);
+            m_buttonMask.gameObject.SetActive(true);
         }
     }
 }
