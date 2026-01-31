@@ -12,6 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e910042725eaed40a9528cd2cb16e36, type: 3}
   m_Name: Ringo
   m_EditorClassIdentifier: Assembly-CSharp::CharacterType
-  title: Ringo
+  title: Crow
   maxHealth: 12
   xp: 20
+  defense: 1
+  attack: 1
+  agility: 3
+  abilityPoints: 10
+  lightMultiplier: 1
+  heavyMultiplier: 2
+  defenseMultiplier: 1
+  attackMultiplier: 1
+  agilityMultiplier: 2
+  mask: {fileID: 0}

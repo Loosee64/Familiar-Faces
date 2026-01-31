@@ -10,6 +10,11 @@ public class CharacterData : MonoBehaviour
     int maxHealth;
     int xp;
     string title;
+    int defense;
+    int attack;
+    int agility;
+    int abilityPoints;
+    int maxAbilityPoints;
     MaskType mask;
 
     private void Awake()
@@ -18,6 +23,11 @@ public class CharacterData : MonoBehaviour
         title = m_character.title;
         xp = m_character.xp;
         mask = m_character.mask;
+        defense = m_character.defense;
+        attack = m_character.attack;
+        agility = m_character.agility;
+        abilityPoints = m_character.abilityPoints;
+        maxAbilityPoints = m_character.maxAbilityPoints;
     }
 
     public void IncreaseMax(int t_level)
@@ -48,4 +58,9 @@ public class CharacterData : MonoBehaviour
     public string GetTitle() { return title; }
     public int GetXP() { return xp; }
     public MaskType GetMask() { return mask; }
+    public int GetDefense() { return defense; }
+    public int GetAttack() { return attack; }
+    public int GetAgility() { return agility; }
+    public int GetAbilityPoints() { return abilityPoints; }
+    public int GetMaxAbilityPoints() { return maxAbilityPoints; }
 }

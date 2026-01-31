@@ -21,7 +21,7 @@ MonoBehaviour:
   abilityPoints: 10
   lightMultiplier: 1
   heavyMultiplier: 2
-  defenseMultiplier: 1
+  defenseMultiplier: 2
   attackMultiplier: 1
   agilityMultiplier: 1
   mask: {fileID: 11400000, guid: 6337412f1ed0225469fb8278fd004576, type: 2}

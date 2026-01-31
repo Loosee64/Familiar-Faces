@@ -43,7 +43,7 @@ public class Health : MonoBehaviour
             t_damage -= m_defense / 2;
             m_health -= Mathf.RoundToInt(t_damage);
             m_healthBarUI.setHealth(m_health);
-            m_text.text = m_health.ToString() + "/" + m_maxHealth.ToString();
+            m_text.text = "HP: " + m_health.ToString() + "/" + m_maxHealth.ToString();
             Debug.Log("damage");
         }
     }
