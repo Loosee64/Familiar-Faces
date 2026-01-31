@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PartyMember : MonoBehaviour
@@ -8,7 +9,9 @@ public class PartyMember : MonoBehaviour
     private ActionType[] m_actions;
     [SerializeField]
     MaskType[] m_masks;
-    int m_currentMaskIndex;
+    [SerializeField]
+    TextMeshProUGUI[] m_maskText;
+    int index;
 
     MaskType m_equippedMask;
 
@@ -39,6 +42,12 @@ public class PartyMember : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        index = 0;
+        foreach(MaskType mask in m_masks)
+        {
+            m_maskText[index].text = mask.type;
+            index++;
+        }
     }
 
     public string Name()
@@ -66,7 +75,15 @@ public class PartyMember : MonoBehaviour
     {
         if (m_turn.TurnCheck())
         {
-            m_damage = m_actions[t_type].m_damage * m_equippedMask.lightMultiplier;
+            switch(t_type)
+            {
+                case 0:
+                    m_damage = m_actions[t_type].m_damage * m_equippedMask.lightMultiplier;
+                    break;
+                case 1:
+                    m_damage = m_actions[t_type].m_damage * m_equippedMask.heavyMultiplier;
+                    break;
+            }
             m_action.Execute(State.ENEMY1, m_damage, m_actions[t_type].m_cost);
         }
     }

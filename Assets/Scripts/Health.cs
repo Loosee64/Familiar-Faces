@@ -10,10 +10,16 @@ public class Health : MonoBehaviour
 
     int m_health;
     private int m_maxHealth;
+    int m_defense;
 
     private void Awake()
     {
         m_text = m_healthBarUI.GetComponentInChildren<TextMeshProUGUI>();
+    }
+
+    public void SetDefense(int t_defense)
+    {
+        m_defense = t_defense;
     }
 
     public void FullHeal()
@@ -34,6 +40,7 @@ public class Health : MonoBehaviour
     {
         if (m_health > 0)
         {
+            t_damage -= m_defense / 2;
             m_health -= Mathf.RoundToInt(t_damage);
             m_healthBarUI.setHealth(m_health);
             m_text.text = m_health.ToString() + "/" + m_maxHealth.ToString();
