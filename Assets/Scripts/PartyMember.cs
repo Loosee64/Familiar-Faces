@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using TMPro;
 
 public class PartyMember : MonoBehaviour
 {
@@ -49,6 +48,7 @@ public class PartyMember : MonoBehaviour
         m_health = GetComponent<Health>();
         m_character = GetComponent<CharacterData>();
         // stats
+        m_character.LoadPlayer();
         m_defense = m_character.GetDefense();
         m_attack = m_character.GetAttack();
         m_agility = m_character.GetAgility();
@@ -99,7 +99,7 @@ public class PartyMember : MonoBehaviour
 
     public void Attack(int t_type)
     {
-        if (m_turn.TurnCheck())
+        if (m_turn.TurnCheck() && t_type != 2)
         {
             switch(t_type)
             {
@@ -111,6 +111,10 @@ public class PartyMember : MonoBehaviour
                     break;
             }
             m_action.Execute(State.ENEMY1, m_damage, m_actions[t_type].m_cost);
+        }
+        else if (t_type == 2)
+        {
+
         }
     }
 

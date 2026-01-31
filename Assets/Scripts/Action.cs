@@ -10,6 +10,7 @@ public class Action : MonoBehaviour
     public UnityEvent m_damageDealt;
 
     private float m_damage;
+    private float m_agility;
     private string m_parentTitle;
     private int m_cost;
     private Health m_target;
@@ -40,6 +41,16 @@ public class Action : MonoBehaviour
         m_damageDealt.Invoke();
 
         m_gameStateRef.TurnEnd();
+    }
+
+    public void Flee(State t_target, float t_agility)
+    {
+        m_agility = m_gameStateRef.GetTargetAgility(t_target);
+
+        if (t_agility > m_agility)
+        {
+
+        }
     }
 }
 

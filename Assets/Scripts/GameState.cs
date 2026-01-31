@@ -24,6 +24,7 @@ public class GameState : MonoBehaviour
     Button m_buttonMask;
 
     public UnityEvent playerTurn;
+    public UnityEvent battleEnd;
 
     State current;
 
@@ -70,6 +71,25 @@ public class GameState : MonoBehaviour
                 break;
         }
         return m_entities[(int)State.ENEMY1].GetComponent<CharacterData>().GetTitle();
+    }
+
+    public float GetTargetAgility(State t_target)
+    {
+        switch(t_target)
+        {
+            case State.PLAYER1:
+                return m_entities[(int)State.PLAYER1].GetComponent<CharacterData>().GetAgility();
+            case State.ENEMY1:
+                return m_entities[(int)State.ENEMY1].GetComponent<CharacterData>().GetAgility();
+            default:
+                break;
+        }
+        return m_entities[(int)State.ENEMY1].GetComponent<CharacterData>().GetAgility();
+    }
+
+    public void Flee()
+    {
+        battleEnd.Invoke();
     }
 
     public void TurnEnd()
