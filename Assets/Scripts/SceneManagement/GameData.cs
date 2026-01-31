@@ -7,7 +7,7 @@ public class GameData : MonoBehaviour
 
     private List<ScriptableObject> m_playerMasks;
     private string m_currentEnemy;
-
+    private int m_playerHealth;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -20,6 +20,14 @@ public class GameData : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+
+    public int playerHealth( int value = 0) 
+    {
+        m_playerHealth -= value;
+
+        return m_playerHealth;
+        
+    }
     public List<ScriptableObject> GetPlayerMasks()
     {
         return m_playerMasks;
