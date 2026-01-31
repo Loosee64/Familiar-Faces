@@ -66,7 +66,7 @@ public class PartyMember : MonoBehaviour
     {
         if (m_turn.TurnCheck())
         {
-            m_damage = m_actions[t_type].m_damage * m_equippedMask.damageMult;
+            m_damage = m_actions[t_type].m_damage * m_equippedMask.lightMultiplier;
             m_action.Execute(State.ENEMY1, m_damage, m_actions[t_type].m_cost);
         }
     }
