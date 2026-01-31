@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class PartyMember : MonoBehaviour
 {
@@ -6,6 +7,14 @@ public class PartyMember : MonoBehaviour
     private int m_maxSP;
     [SerializeField]
     private ActionType[] m_actions;
+    [SerializeField]
+    private TextMeshProUGUI m_dtext;
+    [SerializeField]
+    private TextMeshProUGUI m_atext;
+    [SerializeField]
+    private TextMeshProUGUI m_agtext;
+    [SerializeField]
+    private TextMeshProUGUI m_aptext;
     [SerializeField]
     MaskType[] m_masks;
     int m_currentMaskIndex;
@@ -21,6 +30,12 @@ public class PartyMember : MonoBehaviour
     int m_level;
     int m_sp;
     float m_damage;
+    // base stats
+    int m_defense;
+    int m_attack;
+    int m_agility;
+    int m_abilityPoints;
+    int m_maxAbilityPoints;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,6 +45,12 @@ public class PartyMember : MonoBehaviour
         m_turn = GetComponent<TurnSystem>();
         m_health = GetComponent<Health>();
         m_character = GetComponent<CharacterData>();
+        // stats
+        m_defense = m_character.GetDefense();
+        m_attack = m_character.GetAttack();
+        m_agility = m_character.GetAgility();
+        m_abilityPoints = m_character.GetAbilityPoints();
+        m_maxAbilityPoints = m_character.GetMaxAbilityPoints();
 
         m_health.setMax(m_character.GetMax());
 
@@ -39,6 +60,10 @@ public class PartyMember : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        m_dtext.text = "Defense: " + m_defense.ToString();
+        m_atext.text = "Attack: " + m_attack.ToString();
+        m_agtext.text = "Agility: " + m_agility.ToString();
+        m_aptext.text = "AP: " + m_abilityPoints.ToString() + "/" + m_maxAbilityPoints.ToString();
     }
 
     public string Name()

@@ -12,6 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e910042725eaed40a9528cd2cb16e36, type: 3}
   m_Name: Valentine
   m_EditorClassIdentifier: Assembly-CSharp::CharacterType
-  title: Valentine
+  title: Fox
   maxHealth: 50
   xp: 50
+  defense: 1
+  attack: 1
+  agility: 3
+  abilityPoints: 10
+  lightMultiplier: 1
+  heavyMultiplier: 2
+  defenseMultiplier: 1
+  attackMultiplier: 2
+  agilityMultiplier: 1
+  mask: {fileID: 0}

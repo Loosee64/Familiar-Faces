@@ -12,6 +12,7 @@ public class CharacterType : ScriptableObject
     public int attack = 1;
     public int agility = 3;
     public int abilityPoints = 10;
+    public int maxAbilityPoints = 10;
     // multipliers
     public float lightMultiplier = 1.0f;
     public float heavyMultiplier = 2.0f;
