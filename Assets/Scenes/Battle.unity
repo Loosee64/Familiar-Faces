@@ -1765,6 +1765,7 @@ GameObject:
   - component: {fileID: 687474218}
   - component: {fileID: 687474219}
   - component: {fileID: 687474220}
+  - component: {fileID: 687474221}
   m_Layer: 0
   m_Name: Member1
   m_TagString: Player
@@ -1878,6 +1879,8 @@ MonoBehaviour:
   m_actions:
   - {fileID: 11400000, guid: 08ce85e34f20cbf43adc62117900b314, type: 2}
   - {fileID: 11400000, guid: f467940c8202bcd418f482dff4f98621, type: 2}
+  m_masks:
+  - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
 --- !u!114 &687474218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1916,6 +1919,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   m_character: {fileID: 11400000, guid: 736a1330723ea0c46ac3b03691d120ca, type: 2}
+--- !u!114 &687474221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687474213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6278a37fd7e9dfd4dbbd123c569fa9e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &687817516
 GameObject:
   m_ObjectHideFlags: 0
@@ -3151,6 +3166,7 @@ GameObject:
   - component: {fileID: 1889615426}
   - component: {fileID: 1889615425}
   - component: {fileID: 1889615427}
+  - component: {fileID: 1889615428}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -3302,7 +3318,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterData
   m_character: {fileID: 11400000, guid: c97a07b282775e843ab9555db4c2057b, type: 2}
---- !u!1 &1898319064
+--- !u!114 &1889615428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889615420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a647381a4db9f8b4987161a3531f0cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!1 &2131593614
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

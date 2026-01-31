@@ -6,6 +6,11 @@ public class PartyMember : MonoBehaviour
     private int m_maxSP;
     [SerializeField]
     private ActionType[] m_actions;
+    [SerializeField]
+    MaskType[] m_masks;
+    int m_currentMaskIndex;
+
+    MaskType m_equippedMask;
 
     Action m_action;
     TurnSystem m_turn;
@@ -60,5 +65,18 @@ public class PartyMember : MonoBehaviour
         {
             m_action.Execute(State.ENEMY1, m_actions[t_type]);
         }
+    }
+
+    public void AddMask(MaskType type, int index)
+    {
+        if (m_masks.Length < 3)
+        {
+            m_masks[index] = type;
+        }
+    }
+
+    public void ChangeMask(int index, MaskType type)
+    {
+        m_equippedMask = m_masks[index];
     }
 }
