@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -50,6 +51,7 @@ public class Enemy : MonoBehaviour
         {
             m_deadEvent.Invoke();
             m_respawned = true;
+            SceneManager.LoadScene("Win");
         }
     }
 }
