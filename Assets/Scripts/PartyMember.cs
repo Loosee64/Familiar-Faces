@@ -34,9 +34,9 @@ public class PartyMember : MonoBehaviour
     int m_sp;
     float m_damage;
     // base stats
-    int m_defense;
-    int m_attack;
-    int m_agility;
+    float m_defense;
+    float m_attack;
+    float m_agility;
     int m_abilityPoints;
     int m_maxAbilityPoints;
 
@@ -125,5 +125,13 @@ public class PartyMember : MonoBehaviour
     public void ChangeMask(int index)
     {
         m_equippedMask = m_masks[index];
+
+        m_defense = m_character.GetDefense();
+        m_attack = m_character.GetAttack();
+        m_agility = m_character.GetAgility();
+
+        m_defense *= m_equippedMask.defenseMultiplier;
+        m_attack *= m_equippedMask.attackMultiplier;
+        m_agility *= m_equippedMask.agilityMultiplier;
     }
 }
