@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e910042725eaed40a9528cd2cb16e36, type: 3}
-  m_Name: Ringo
+  m_Name: Crow
   m_EditorClassIdentifier: Assembly-CSharp::CharacterType
   title: Crow
   maxHealth: 12

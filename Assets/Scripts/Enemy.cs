@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour
         }
         else if (!m_health.IsAlive() && !m_respawned)
         {
-            m_deadEvent.Invoke();
+           // m_deadEvent.Invoke();
             m_respawned = true;
         }
     }
