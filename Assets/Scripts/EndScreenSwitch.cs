@@ -8,4 +8,9 @@ public class EndScreenSwitch : MonoBehaviour
     {
         SceneManager.LoadScene("Battle Entry");
     }
+
+    public void MainMenuScene()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }

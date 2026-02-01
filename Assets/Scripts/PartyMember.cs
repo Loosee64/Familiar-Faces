@@ -96,6 +96,7 @@ public class PartyMember : MonoBehaviour
 
         if (!m_health.IsAlive())
         {
+            GameData.Instance.ResetMasks();
             SceneManager.LoadScene("Loss");
         }
     }

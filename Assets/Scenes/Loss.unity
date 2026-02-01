@@ -204,7 +204,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1249904376}
         m_TargetAssemblyTypeName: EndScreenSwitch, Assembly-CSharp
-        m_MethodName: BattleEntryScene
+        m_MethodName: MainMenuScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -459,6 +459,9 @@ MonoBehaviour:
   m_damageDealt:
     m_PersistentCalls:
       m_Calls: []
+  fleeFail:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &339814811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,14 +482,16 @@ MonoBehaviour:
   m_atext: {fileID: 0}
   m_agtext: {fileID: 0}
   m_aptext: {fileID: 0}
-  m_masks:
-  - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
-  - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
-  - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
   m_maskText:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  m_gameStateRef: {fileID: 0}
+  maskDisplays: []
+  apBar: {fileID: 0}
+  outofAP:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &339814812
 SpriteRenderer:
   serializedVersion: 2
