@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
     {
         if (m_turn.TurnCheck() && m_health.IsAlive())
         {
-            m_action.Execute(State.PLAYER1, m_type.m_damage, m_type.m_cost);
+            m_action.Execute(State.PLAYER1, m_type.m_damage * m_character.GetAttack(), m_type.m_cost);
         }
         else if (!m_health.IsAlive() && !m_respawned)
         {

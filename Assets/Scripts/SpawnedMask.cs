@@ -6,6 +6,7 @@ public class SpawnedMask : MonoBehaviour
 {
     [SerializeField]
     MaskType maskType;
+
     public UnityEvent selected;
 
     private void Awake()
@@ -18,5 +19,4 @@ public class SpawnedMask : MonoBehaviour
         maskType = type;
         selected.Invoke();
     }
-
 }

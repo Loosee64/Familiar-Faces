@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class PartyMember : MonoBehaviour
@@ -20,6 +21,9 @@ public class PartyMember : MonoBehaviour
     TextMeshProUGUI[] m_maskText;
     [SerializeField]
     GameState m_gameStateRef;
+    [SerializeField]
+    RectTransform[] maskDisplays;
+
     int index;
     MaskType[] m_masks;
 
@@ -145,5 +149,27 @@ public class PartyMember : MonoBehaviour
         m_defense *= m_equippedMask.defenseMultiplier;
         m_attack *= m_equippedMask.attackMultiplier;
         m_agility *= m_equippedMask.agilityMultiplier;
+    }
+
+    public void DisplayMask()
+    {
+        switch (m_equippedMask.type)
+        {
+            case "Squirrel":
+                maskDisplays[0].gameObject.SetActive(true);
+                maskDisplays[1].gameObject.SetActive(false);
+                maskDisplays[2].gameObject.SetActive(false);
+                break;
+            case "Crow":
+                maskDisplays[0].gameObject.SetActive(false);
+                maskDisplays[1].gameObject.SetActive(true);
+                maskDisplays[2].gameObject.SetActive(false);
+                break;
+            case "Fox":
+                maskDisplays[0].gameObject.SetActive(false);
+                maskDisplays[1].gameObject.SetActive(false);
+                maskDisplays[2].gameObject.SetActive(true);
+                break;
+        }
     }
 }

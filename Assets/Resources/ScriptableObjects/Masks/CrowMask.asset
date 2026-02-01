@@ -18,7 +18,7 @@ MonoBehaviour:
   agility: 3
   abilityPoints: 10
   lightMultiplier: 0.5
-  heavyMultiplier: 2
+  heavyMultiplier: 1
   defenseMultiplier: 1
   attackMultiplier: 1
   agilityMultiplier: 2
