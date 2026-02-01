@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Battle.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Battle Entry.unity
+    guid: d61f13dc0dc463e499cc2a8ab57d57ba
+  - enabled: 1
+    path: Assets/Scenes/Loss.unity
+    guid: 1c6ea028137f2654dbcf2a7e46d40141
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: ee5e290cd5b6db641b80837b7f3712b3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PartyMember : MonoBehaviour
 {
@@ -74,6 +75,11 @@ public class PartyMember : MonoBehaviour
         m_atext.text = "Attack: " + m_attack.ToString();
         m_agtext.text = "Agility: " + m_agility.ToString();
         m_aptext.text = "AP: " + m_abilityPoints.ToString() + "/" + m_maxAbilityPoints.ToString();
+
+        if (!m_health.IsAlive())
+        {
+            SceneManager.LoadScene("Loss");
+        }
     }
 
     public string Name()
