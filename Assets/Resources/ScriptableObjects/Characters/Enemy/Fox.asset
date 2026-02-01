@@ -16,7 +16,7 @@ MonoBehaviour:
   maxHealth: 50
   xp: 50
   defense: 1
-  attack: 1
+  attack: 3
   agility: 3
   abilityPoints: 10
   maxAbilityPoints: 10

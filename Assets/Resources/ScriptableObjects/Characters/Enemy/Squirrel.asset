@@ -15,14 +15,9 @@ MonoBehaviour:
   title: Squirrel
   maxHealth: 10
   xp: 10
-  defense: 1
+  defense: 3
   attack: 1
   agility: 3
   abilityPoints: 10
   maxAbilityPoints: 10
-  lightMultiplier: 1
-  heavyMultiplier: 2
-  defenseMultiplier: 2
-  attackMultiplier: 1
-  agilityMultiplier: 1
-  mask: {fileID: 11400000, guid: 6337412f1ed0225469fb8278fd004576, type: 2}
+  mask: {fileID: 11400000, guid: e9152f571b6a8d042861bf3c6a5f53d8, type: 2}
