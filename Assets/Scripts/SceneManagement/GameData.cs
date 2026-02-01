@@ -5,7 +5,9 @@ public class GameData : MonoBehaviour
 {
     public static GameData Instance { get; private set; }
 
-    private List<ScriptableObject> m_playerMasks;
+    [SerializeField]
+    private MaskType[] m_playerMasks;
+    int maskIndex;
     private string m_currentEnemy;
     private int m_playerHealth;
     private void Awake()
@@ -18,6 +20,8 @@ public class GameData : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        maskIndex = 0;
     }
 
 
@@ -28,9 +32,23 @@ public class GameData : MonoBehaviour
         return m_playerHealth;
         
     }
-    public List<ScriptableObject> GetPlayerMasks()
+    public MaskType[] GetPlayerMasks()
     {
         return m_playerMasks;
+    }
+
+    public void setPlayerMasks(MaskType[] t_masks)
+    {
+        m_playerMasks = t_masks;
+    }
+
+    public void AddMask(MaskType mask)
+    {
+        if (maskIndex < 3)
+        {
+            m_playerMasks[maskIndex] = mask;
+            maskIndex++;
+        }
     }
 
     public void setCurrentEnemyCharacterName(string t_name)
