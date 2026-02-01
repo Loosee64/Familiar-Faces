@@ -20,9 +20,9 @@ public class CharacterData : MonoBehaviour
 
     private void Awake()
     {
-        
-        
-       
+
+
+        loadCharaacter();
     }
 
     public void IncreaseMax(int t_level)
@@ -43,6 +43,7 @@ public class CharacterData : MonoBehaviour
 
     public void LoadPlayer()
     {
+
         CharacterType tempChar = Resources.Load<CharacterType>("ScriptableObjects/Characters/Player");
 
         maxHealth = tempChar.maxHealth;
@@ -58,7 +59,7 @@ public class CharacterData : MonoBehaviour
         maxAbilityPoints = tempChar.maxAbilityPoints;
     }
 
-    public void loadCharaacter(string t_name)
+    public void loadCharaacter(string t_name = "Squirrel")
     {
         CharacterType tempChar = Resources.Load<CharacterType>("ScriptableObjects/Characters/Enemy/" + t_name);
 
