@@ -15,7 +15,7 @@ MonoBehaviour:
   title: Squirrel
   maxHealth: 10
   xp: 10
-  defense: 1
+  defense: 3
   attack: 1
   agility: 3
   abilityPoints: 10
