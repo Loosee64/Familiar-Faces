@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: WeakAttack
   m_EditorClassIdentifier: Assembly-CSharp::ActionType
   m_damage: 1
-  m_cost: 0
+  m_cost: 1

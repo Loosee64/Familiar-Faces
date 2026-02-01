@@ -1216,6 +1216,10 @@ MonoBehaviour:
   - {fileID: 0}
   m_gameStateRef: {fileID: 0}
   maskDisplays: []
+  apBar: {fileID: 0}
+  outofAP:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &1557251638
 SpriteRenderer:
   serializedVersion: 2
@@ -1408,10 +1412,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d98505fb72db344398a5c1a254b618e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameData
+  m_emptyMasks:
+  - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
+  - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
+  - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
   m_playerMasks:
-  - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
-  - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
-  - {fileID: 11400000, guid: 15f6ef87cf184a5418423fa3bb68f54d, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1581560115
 Transform:
   m_ObjectHideFlags: 0

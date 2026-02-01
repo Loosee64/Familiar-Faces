@@ -15,7 +15,7 @@ MonoBehaviour:
   title: Crow
   maxHealth: 12
   xp: 20
-  defense: 1
+  defense: 0
   attack: 1
   agility: 5
   abilityPoints: 10
