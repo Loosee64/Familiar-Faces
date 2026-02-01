@@ -41,7 +41,6 @@ public class Health : MonoBehaviour
     {
         if (m_health > 0)
         {
-            t_damage -= m_defense / 2;
             m_health -= Mathf.RoundToInt(t_damage);
             m_healthBarUI.setHealth(m_health);
             m_text.text = "HP: " + m_health.ToString() + "/" + m_maxHealth.ToString();

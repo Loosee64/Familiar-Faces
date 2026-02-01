@@ -2322,7 +2322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be459c1583f7d074cb783d5b076ff84d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  m_maxSP: 2
+  m_maxSP: 10
   m_actions:
   - {fileID: 11400000, guid: 08ce85e34f20cbf43adc62117900b314, type: 2}
   - {fileID: 11400000, guid: f467940c8202bcd418f482dff4f98621, type: 2}
@@ -2339,6 +2339,10 @@ MonoBehaviour:
   - {fileID: 1064819119}
   - {fileID: 83630631}
   - {fileID: 854518042}
+  apBar: {fileID: 1629755651}
+  outofAP:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &687474218
 MonoBehaviour:
   m_ObjectHideFlags: 0

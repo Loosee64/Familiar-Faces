@@ -37,6 +37,12 @@ public class Dialogue : MonoBehaviour
         m_text.text = "Failed to flee from battle";
         m_gameStateRef.TurnEnd();
     }
+
+    public void NoAP()
+    {
+        m_text.text = "Not enough AP for this move";
+        m_gameStateRef.ForcePlayerTurn();
+    }
     public void PlayerTurn()
     {
         m_text.text = "";
