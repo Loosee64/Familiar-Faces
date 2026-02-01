@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fox
   m_EditorClassIdentifier: Assembly-CSharp::CharacterType
   title: Fox
-  maxHealth: 50
+  maxHealth: 15
   xp: 50
   defense: 1
   attack: 3
