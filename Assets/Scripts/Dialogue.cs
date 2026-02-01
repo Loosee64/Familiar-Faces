@@ -32,6 +32,11 @@ public class Dialogue : MonoBehaviour
         m_text.text = t_title + " has died!";
     }
 
+    public void DisplayFlee()
+    {
+        m_text.text = "Failed to flee from battle";
+        m_gameStateRef.TurnEnd();
+    }
     public void PlayerTurn()
     {
         m_text.text = "";

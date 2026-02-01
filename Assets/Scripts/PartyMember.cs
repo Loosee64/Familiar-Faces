@@ -17,10 +17,11 @@ public class PartyMember : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI m_aptext;
     [SerializeField]
-    MaskType[] m_masks;
-    [SerializeField]
     TextMeshProUGUI[] m_maskText;
+    [SerializeField]
+    GameState m_gameStateRef;
     int index;
+    MaskType[] m_masks;
 
     MaskType m_equippedMask;
 
@@ -58,7 +59,9 @@ public class PartyMember : MonoBehaviour
 
         m_health.setMax(m_character.GetMax());
 
-        m_equippedMask = m_masks[0];
+        m_masks = GameData.Instance.GetPlayerMasks();
+
+        ChangeMask(0);
     }
 
     // Update is called once per frame
@@ -75,6 +78,8 @@ public class PartyMember : MonoBehaviour
         m_atext.text = "Attack: " + m_attack.ToString();
         m_agtext.text = "Agility: " + m_agility.ToString();
         m_aptext.text = "AP: " + m_abilityPoints.ToString() + "/" + m_maxAbilityPoints.ToString();
+
+        m_action.SetAgility(m_agility);
 
         if (!m_health.IsAlive())
         {
@@ -105,7 +110,7 @@ public class PartyMember : MonoBehaviour
 
     public void Attack(int t_type)
     {
-        if (m_turn.TurnCheck() && t_type != 2)
+        if (m_turn.TurnCheck())
         {
             switch(t_type)
             {
@@ -118,10 +123,6 @@ public class PartyMember : MonoBehaviour
             }
             m_action.Execute(State.ENEMY1, m_damage, m_actions[t_type].m_cost);
         }
-        else if (t_type == 2)
-        {
-
-        }
     }
 
     public void AddMask(MaskType type, int index)
@@ -129,6 +130,7 @@ public class PartyMember : MonoBehaviour
         if (m_masks.Length < 3)
         {
             m_masks[index] = type;
+            GameData.Instance.setPlayerMasks(m_masks);
         }
     }
 
