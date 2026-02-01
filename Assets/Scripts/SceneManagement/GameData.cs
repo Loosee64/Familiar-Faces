@@ -6,6 +6,8 @@ public class GameData : MonoBehaviour
     public static GameData Instance { get; private set; }
 
     [SerializeField]
+    private MaskType[] m_emptyMasks;
+    [SerializeField]
     private MaskType[] m_playerMasks;
     int maskIndex;
     private string m_currentEnemy;
@@ -21,9 +23,16 @@ public class GameData : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        maskIndex = 0;
+        ResetMasks();
     }
 
+    public void ResetMasks()
+    {
+        m_playerMasks[0] = m_emptyMasks[0];
+        m_playerMasks[1] = m_emptyMasks[1];
+        m_playerMasks[2] = m_emptyMasks[2];
+        maskIndex = 0;
+    }
 
     public int playerHealth( int value = 0) 
     {

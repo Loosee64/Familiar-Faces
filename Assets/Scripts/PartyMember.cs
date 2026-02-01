@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class PartyMember : MonoBehaviour
 {
@@ -23,6 +24,10 @@ public class PartyMember : MonoBehaviour
     GameState m_gameStateRef;
     [SerializeField]
     RectTransform[] maskDisplays;
+    [SerializeField]
+    HealthBarUI apBar;
+
+    public UnityEvent outofAP;
 
     int index;
     MaskType[] m_masks;
@@ -36,7 +41,7 @@ public class PartyMember : MonoBehaviour
 
     float m_xp;
     int m_level;
-    int m_sp;
+    int m_ap;
     float m_damage;
     // base stats
     float m_defense;
@@ -48,7 +53,11 @@ public class PartyMember : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        m_sp = m_maxSP;
+        outofAP.AddListener(GameObject.FindGameObjectWithTag("Dialogue").GetComponent<Dialogue>().NoAP);
+
+        m_ap = m_maxSP;
+        apBar.setHealth(m_ap);
+        apBar.setMax(m_maxSP);
         m_action = GetComponent<Action>();
         m_turn = GetComponent<TurnSystem>();
         m_health = GetComponent<Health>();
@@ -81,12 +90,13 @@ public class PartyMember : MonoBehaviour
         m_dtext.text = "Defense: " + m_defense.ToString();
         m_atext.text = "Attack: " + m_attack.ToString();
         m_agtext.text = "Agility: " + m_agility.ToString();
-        m_aptext.text = "AP: " + m_abilityPoints.ToString() + "/" + m_maxAbilityPoints.ToString();
+        m_aptext.text = "AP: " + m_ap.ToString() + "/" + m_maxAbilityPoints.ToString();
 
         m_action.SetAgility(m_agility);
 
         if (!m_health.IsAlive())
         {
+            GameData.Instance.ResetMasks();
             SceneManager.LoadScene("Loss");
         }
     }
@@ -116,7 +126,13 @@ public class PartyMember : MonoBehaviour
     {
         if (m_turn.TurnCheck())
         {
-            switch(t_type)
+            if (m_ap - m_actions[t_type].m_cost < 0)
+            {
+                outofAP.Invoke();
+                return;
+            }
+
+            switch (t_type)
             {
                 case 0:
                     m_damage = m_actions[t_type].m_damage * m_equippedMask.lightMultiplier;
@@ -126,6 +142,8 @@ public class PartyMember : MonoBehaviour
                     break;
             }
             m_action.Execute(State.ENEMY1, m_damage, m_actions[t_type].m_cost);
+            m_ap -= m_actions[t_type].m_cost;
+            apBar.setHealth(m_ap);
         }
     }
 

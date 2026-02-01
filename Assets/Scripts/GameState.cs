@@ -87,6 +87,20 @@ public class GameState : MonoBehaviour
         return m_entities[(int)State.ENEMY1].GetComponent<CharacterData>().GetAgility();
     }
 
+    public float GetTargetDefense(State t_target)
+    {
+        switch (t_target)
+        {
+            case State.PLAYER1:
+                return m_entities[(int)State.PLAYER1].GetComponent<CharacterData>().GetDefense();
+            case State.ENEMY1:
+                return m_entities[(int)State.ENEMY1].GetComponent<CharacterData>().GetDefense();
+            default:
+                break;
+        }
+        return m_entities[(int)State.ENEMY1].GetComponent<CharacterData>().GetDefense();
+    }
+
     public void Flee()
     {
         battleEnd.Invoke();
@@ -104,6 +118,13 @@ public class GameState : MonoBehaviour
         {
             current = State.PLAYER1;
         }
+
+        StartCoroutine(StartTurn());
+    }
+
+    public void ForcePlayerTurn()
+    {
+        current = State.PLAYER1;
 
         StartCoroutine(StartTurn());
     }

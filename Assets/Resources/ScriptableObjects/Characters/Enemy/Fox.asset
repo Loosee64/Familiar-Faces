@@ -15,7 +15,7 @@ MonoBehaviour:
   title: Fox
   maxHealth: 15
   xp: 50
-  defense: 1
+  defense: 2
   attack: 3
   agility: 3
   abilityPoints: 10

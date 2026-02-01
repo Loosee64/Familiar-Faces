@@ -41,6 +41,7 @@ public class Action : MonoBehaviour
 
         m_target = m_gameStateRef.GetTarget(t_target);
         m_targetName = m_gameStateRef.GetTargetName(t_target);
+        m_damage -= (m_gameStateRef.GetTargetDefense(t_target) - 1) / 2;
         m_target.Damage(m_damage);
 
         m_damageDealt.Invoke();
