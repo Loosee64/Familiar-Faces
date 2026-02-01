@@ -46,7 +46,6 @@ public class Health : MonoBehaviour
             m_healthBarUI.setHealth(m_health);
             m_text.text = "HP: " + m_health.ToString() + "/" + m_maxHealth.ToString();
             Debug.Log("damage");
-            SceneManager.LoadScene("Loss");
         }
     }
 
