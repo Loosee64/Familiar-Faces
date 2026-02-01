@@ -17,4 +17,9 @@ public class SceneTransitions : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }

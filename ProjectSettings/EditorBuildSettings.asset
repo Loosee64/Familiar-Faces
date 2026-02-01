@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: afe78f2d48b7d0f48b7006a27759282d
+  - enabled: 1
     path: Assets/Scenes/Battle.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
@@ -16,7 +19,10 @@ EditorBuildSettings:
     guid: 1c6ea028137f2654dbcf2a7e46d40141
   - enabled: 1
     path: Assets/Scenes/Win.unity
-    guid: ee5e290cd5b6db641b80837b7f3712b3
+    guid: 94a57f171e41eb44dbde3779fc490758
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: 5452dee42e0b2784583339bb9754ba73
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

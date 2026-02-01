@@ -28,12 +28,6 @@ public class Action : MonoBehaviour
         fleeFail.AddListener(GameObject.FindGameObjectWithTag("Dialogue").GetComponent<Dialogue>().DisplayFlee);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Execute(State t_target, float t_damage, int t_cost)
     {
         m_damage = t_damage;

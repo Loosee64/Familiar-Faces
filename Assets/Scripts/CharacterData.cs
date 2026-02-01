@@ -22,7 +22,7 @@ public class CharacterData : MonoBehaviour
     {
 
 
-        loadCharaacter();
+        //loadCharaacter();
     }
 
     public void IncreaseMax(int t_level)
